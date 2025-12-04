@@ -13,6 +13,8 @@
 <body>
 
     <nav class="navbar">
+    
+
         <div class="container">
             <a href="#" class="logo">Marci Metzger<span>.</span></a>
             <ul class="nav-links">
@@ -36,6 +38,26 @@
             <div class="hero-buttons">
                 <a href="#listings" class="btn-primary">View Listings</a>
                 <a href="#contact" class="btn-secondary">Get in Touch</a>
+            </div>
+            <!-- Search panel removed from hero; moved into dedicated Find section -->
+        </div>
+    </section>
+
+    <section class="get-it-sold-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>GET IT SOLD</h2>
+            </div>
+            <div class="split-layout">
+                <div class="gis-image">
+                    <img src="drive-download-20251204T132918Z-3-001/Don't Just List it....jpg" alt="Get It Sold">
+                </div>
+                <div class="gis-text">
+                    <h3>Top Residential Sales Last 5 Years</h3>
+                    <p>We helped nearly 90 clients in 2021, and closed 28.5 million in sales! Our team works hard every day to grow and learn, so that we may continue to excel in our market. Our clients deserve our best, & we want to make sure our best is better every year.</p>
+                    <p class="subtitle">Don't Just List it...</p>
+                    <p>Get it SOLD! We exhaust every avenue to ensure our listings are at the fingertips of every possible buyer, getting you top dollar for your home.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -79,7 +101,77 @@
             </div>
         </div>
     </section>
+<!-- Dedicated Find Your Dream Home section (moved from hero) -->
+    <section id="find-home" class="find-section">
+        <div class="container">
+            <div class="find-card">
+                <h2 class="find-title">Find Your Dream Home</h2>
+                <form id="find-form" class="search-form">
+                    <div class="search-row">
+                        <div class="form-group">
+                            <label for="f-location">Location</label>
+                            <select id="f-location">
+                                <option value="">Any</option>
+                                <option value="pahrump">Pahrump</option>
+                                <option value="las-vegas">Las Vegas</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="f-type">Type</label>
+                            <select id="f-type">
+                                <option value="">Any</option>
+                                <option value="residential">Residential</option>
+                                <option value="commercial">Commercial</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="f-sort">Sort By</label>
+                            <select id="f-sort">
+                                <option value="newest">Newest</option>
+                                <option value="price-desc">Price: High → Low</option>
+                                <option value="price-asc">Price: Low → High</option>
+                            </select>
+                        </div>
+                    </div>
 
+                    <div class="search-row small-row">
+                        <div class="form-group">
+                            <label for="f-beds">Bedrooms</label>
+                            <select id="f-beds">
+                                <option value="">Any Number</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="f-baths">Baths</label>
+                            <select id="f-baths">
+                                <option value="">Any Number</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                            </select>
+                        </div>
+                        <div class="form-group price-group">
+                            <label for="f-min-price">Min Price</label>
+                            <input id="f-min-price" type="text" placeholder="$0">
+                        </div>
+                        <div class="form-group price-group">
+                            <label for="f-max-price">Max Price</label>
+                            <input id="f-max-price" type="text" placeholder="$1,000,000+">
+                        </div>
+                        <div class="form-group action-group">
+                            <label>&nbsp;</label>
+                            <button id="f-search" type="submit" class="btn-primary search-btn">Search Now</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="find-results" class="find-results">
+                    <!-- Client-side filtered listings will appear here -->
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="services" class="services-section">
         <div class="container">
             <div class="section-title">
@@ -220,6 +312,55 @@
                         <li>Spacious outdoor recreation</li>
                         <li>Family-friendly atmosphere</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Photo Gallery</h2>
+                <p>Browse our beautiful properties and community spaces</p>
+            </div>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="drive-download-20251204T132918Z-3-001/Photo Gallery.jpg" alt="Photo Gallery">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="drive-download-20251204T132918Z-3-001/Photo Gallery1.jpg" alt="Photo Gallery 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="drive-download-20251204T132918Z-3-001/Photo Gallery2.jpg" alt="Photo Gallery 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="drive-download-20251204T132918Z-3-001/Photo Gallery3.jpg" alt="Photo Gallery 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="drive-download-20251204T132918Z-3-001/Photo Gallery4.jpg" alt="Photo Gallery 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="drive-download-20251204T132918Z-3-001/Photo Gallery5.jpg" alt="Photo Gallery 5">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="drive-download-20251204T132918Z-3-001/Photo Gallery6.jpg" alt="Photo Gallery 6">
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-prev" onclick="changeSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-next" onclick="changeSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="currentSlide(0)"></span>
+                    <span class="indicator" onclick="currentSlide(1)"></span>
+                    <span class="indicator" onclick="currentSlide(2)"></span>
+                    <span class="indicator" onclick="currentSlide(3)"></span>
+                    <span class="indicator" onclick="currentSlide(4)"></span>
+                    <span class="indicator" onclick="currentSlide(5)"></span>
+                    <span class="indicator" onclick="currentSlide(6)"></span>
                 </div>
             </div>
         </div>
@@ -393,6 +534,35 @@
                 });
             });
         });
+
+        // Carousel Functions
+        let currentSlideIndex = 0;
+
+        function changeSlide(n) {
+            showSlide(currentSlideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlide(currentSlideIndex = n);
+        }
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.carousel-item');
+            const indicators = document.querySelectorAll('.indicator');
+            
+            if (n >= slides.length) {
+                currentSlideIndex = 0;
+            }
+            if (n < 0) {
+                currentSlideIndex = slides.length - 1;
+            }
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            slides[currentSlideIndex].classList.add('active');
+            indicators[currentSlideIndex].classList.add('active');
+        }
     </script>
 
     <!-- Leaflet JS and site map script -->
